@@ -5,18 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="/assets/global.css">
+<link rel="stylesheet" href="/assets/styleCadastrar.css">
 <body>
-    <container-return class="return">
+    <div class="return">
+        <a href="index.html">
+            <i><img src="/assets/icons/return-svgrepo-com.svg" width="20px" height="20px"></i>
+            <h4>Voltar</h4></a>
+    </div>
 
-        <h4>Voltar</h4>
-    </container-return>
-    <i class="bi bi-arrow-return-left"></i>
-    <h1>Cadastrar Aluno</h1>
-
-    <script src="/src/report.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <div class="container-cadastrar">
+        <h1>Cadastrar Aluno</h1>
+        <form action="">
+            <div class="form-group">
+                <label for="name">
+                    Nome:
+                    <input type="text" name="name" id="name">
+                </label>
+            </div>
+            <div class="form-group">
+                <label for="ra">
+                    RA:
+                    <input type="text" name="ra" id="ra">
+                </label>
+            </div>
+            <div class="form-group">
+                <label for="age">
+                    Idade:
+                    <input type="text" name="age" id="age">
+                </label>
+            </div>
+            <div class="form-group">
+                <label for="media">
+                    Média:
+                    <input type="number" name="media" id="media">
+                </label>
+            </div>
+        </form>
+        <div id="resultado">
+            Aprovado/Reprovado
+        </div>
+    </div>
     
 </body>
 </html>
