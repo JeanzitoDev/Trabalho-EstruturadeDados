@@ -6,42 +6,56 @@ const age = document.getElementById("age");
 const button = document.getElementById("cadastrarBtn");
 const falied = document.getElementById("faltaDados");
 
+let media = null;
+let result = "";
+
 nota.addEventListener('blur', function() {
-    const media = parseFloat(nota.value);
+    media = parseFloat(nota.value);
 
     if (!isNaN(media)) {
-        let status;
         if (media >= 7) {
-            status = "Aprovado";
-            resultado.textContent = status;
+            result = "Aprovado";
+            resultado.textContent = result;
             resultado.style.fontSize = "20px";
         } else {
-            status = "Reprovado";
-            resultado.textContent = status;
+            result = "Reprovado";
+            resultado.textContent = result;
             resultado.style.fontSize = "20px";
-
         }
-
-      
-        localStorage.setItem("StatusMedia", status);
-        localStorage.setItem("mediaValor", media);
     } else {
         resultado.textContent = "";
     }
 });
 
 button.addEventListener('click', function(event) {
-    event.preventDefault(); 
+    event.preventDefault();
 
-    if (nome.value && ra.value && age.value && nota.value) {
-        localStorage.setItem("nomeValor", nome.value);
-        localStorage.setItem("raValor", ra.value);
-        localStorage.setItem("idadeValor", age.value);
+    if (nome.value && ra.value && age.value && !isNaN(media)) {
+        const aluno = {
+            nome: nome.value,
+            ra: ra.value,
+            idade: age.value,
+            media: media,
+            status: result
+        };
 
-        falied.textContent = "";
-        falied.textContent = "Aluno cadastrado!"
+        let alunos = JSON.parse(localStorage.getItem("alunos")) || [];
+
+        alunos.push(aluno);
+
+        localStorage.setItem("alunos", JSON.stringify(alunos));
+
+        falied.textContent = "Aluno cadastrado com sucesso!";
+        falied.textContent.style.fontSize = "20px";
+
+        nome.value = "";
+        ra.value = "";
+        age.value = "";
+        nota.value = "";
+        resultado.textContent = "";
+        media = null;
+        
     } else {
-        falied.textContent = "Preencha todos os campos!";
-    
+        falied.textContent = "Preencha todos os campos corretamente!";
     }
 });
