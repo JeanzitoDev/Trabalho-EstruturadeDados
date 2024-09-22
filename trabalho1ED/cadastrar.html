@@ -15,6 +15,8 @@
     </div>
 
     <div class="container-cadastrar">
+        <div id="faltaDados"></div>
+
         <h1>Cadastrar Aluno</h1>
         <form action="">
             <div class="form-group">
@@ -38,17 +40,17 @@
             <div class="form-group">
                 <label for="media">
                     Média:
-                    <input type="text" name="media" id="media">
+                    <input type="number" name="media" id="media">
                 </label>
             </div>
         </form>
-        <div id="resultado">
-        
-        </div>
+
+        <div id="resultado"></div>
+
         <div class="cadastrar">
-            <button>Cadastrar</button>
+            <button id="cadastrarBtn">Cadastrar</button>
         </div>
     </div>
-    <script src="/src/approve.js"></script>
+    <script src="/src/cadastrarAluno.js"></script>
 </body>
 </html>

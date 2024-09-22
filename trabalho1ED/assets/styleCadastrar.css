@@ -89,8 +89,16 @@ input {
     font-family: "Ubuntu", sans-serif;
     font-weight: 700;
     font-style: normal;
+    cursor: pointer;
 
 }
+
+.cadastrar button:hover {
+    background-color: #136d16; /* Cor verde */
+    color: white;
+    transform: scale(0.98); /* Efeito de "clicado" */
+}
+
 
 .return {
     display: flex;
