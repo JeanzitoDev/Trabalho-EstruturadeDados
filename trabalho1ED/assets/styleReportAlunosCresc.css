@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+body {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #6a51db;
+    background-image: linear-gradient(0deg, #1c299c 0%, #5690c5 100%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
+    margin-left: 30px;
+}
+
+h1 {
+    margin-top: 60px; /* Aumentando a distância do topo */
+}
+
+.return-1 {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.return-1 a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+}
+
+.return-1 img {
+    margin-right: 8px;
+}
+
+.return-1 h4 {
+    margin: 0;
+}
+
+table {
+    width: 80%; /* Diminuindo o tamanho da tabela */
+    margin: 40px auto; /* Centralizando a tabela e adicionando margem superior */
+    border-collapse: collapse;
+    border: 1px solid white; /* Borda fina ao redor da tabela */
+    border-radius: 12px; /* Arredondando as pontas da tabela */
+    overflow: hidden; /* Para aplicar o arredondamento nas bordas */
+    background-color: white;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    color: black; /* Alterando o texto da tabela para preto */
+}
+
+th {
+    background-color: #6a51db;
+    color: white;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+}
+
+button {
+    margin-top: 20px;
+    padding: 13px 26px; /* Aumentando o tamanho do botão em 30% */
+    background-color: #6a51db;
+    color: white;
+    border-radius: 25px;
+    cursor: pointer;
+    border-color: white;
+    border: none;
+    font-size: 18px;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+button:hover {
+    background-color: #5a41ca;
+}
+
