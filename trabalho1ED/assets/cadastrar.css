@@ -97,9 +97,9 @@ input {
 }
 
 .cadastrar button:hover {
-    background-color: #136d16; /* Cor verde */
+    background-color: #136d16; 
     color: white;
-    transform: scale(0.98); /* Efeito de "clicado" */
+    transform: scale(0.98);
 }
 
 
